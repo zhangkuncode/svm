@@ -1,0 +1,7 @@
+if you want to use my_led's data as SVM train_data
+there some steps(you need convert to CV_32F after reshape):
+
+Mat src = imread("XXX.jpg", 0);
+src = src.reshape(0 ,1);
+src.convertTo(src, CV_32F);
+train_data.push_back(src);
